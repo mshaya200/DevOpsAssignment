@@ -5,7 +5,7 @@ node {
         git branch: "main", url: 'https://github.com/mshaya200/DevOpsAssignment'
         echo "Pull Successful"
         sh "pwd"
-        sh "pwd"
+        
     }
     stage('Compile') {
         // Run the maven build
