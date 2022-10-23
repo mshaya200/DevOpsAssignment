@@ -2,7 +2,7 @@ node {
 
     stage('Git Pull') { // for display purposes
 
-        git branch: "main", url: 'https://github.com/mshaya200/DevOpsAssignment'
+        git branch: 'main', credentialsId: 'mshaya200', url: 'https://github.com/mshaya200/DevOpsAssignment'
         echo "Pull Successful"
         sh "pwd"
         sh "pwd"
