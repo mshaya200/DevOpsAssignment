@@ -1,0 +1,25 @@
+node {
+
+    stage('Git Pull') { // for display purposes
+
+        git branch: "main", url: 'https://github.com/mshaya200/DevOpsAssignment'
+        echo "Pull Successful"
+        sh "pwd"
+    }
+    stage('Compile') {
+        // Run the maven build
+        sh "javac CurrencyConverter.java"
+        echo "Compile successful"
+        
+    }
+    stage('Test') {
+        // Run the tests
+        echo "Test Sucessful"
+        
+    }    
+    stage('Results') {
+       sh "java CurrencyConverter 50 dollars"  
+        
+
+    }
+}
