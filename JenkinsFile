@@ -6,7 +6,6 @@ node {
         echo "Pull Successful"
         sh "pwd"
         sh "pwd"
-        sh "pwd"
     }
     stage('Compile') {
         // Run the maven build
