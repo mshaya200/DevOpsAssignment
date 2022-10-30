@@ -7,11 +7,16 @@ node {
         sh "pwd"
     }
     stage('Compile') {
-        // Run the maven build
+        
         sh "javac CurrencyConverter.java"
         echo "Compile successful"
         
     }
+    stage('Build') {
+        // Run the maven build
+        sh "mvn clean package"
+                
+    }    
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
     withSonarQubeEnv() {
