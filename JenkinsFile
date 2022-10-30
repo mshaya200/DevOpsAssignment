@@ -12,7 +12,12 @@ node {
         sh "javac CurrencyConverter.java"
         echo "Compile successful"
         
-    }    
+    }
+
+  stage('SCM') {
+    checkout scm
+  }
+
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
     withSonarQubeEnv() {
