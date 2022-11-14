@@ -31,5 +31,7 @@ public class CurrencyConverter {
  break;
  }
  System.out.println("Thank you for using the converter.");
+ System.out.println("Adding commit");
+ 
  }
 }
